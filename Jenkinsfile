@@ -4,7 +4,7 @@ pipeline {
     stage('mkdir') {
       steps {
         sh '''#!/bin/bash
-ls -al
+
 pwd
 
 
