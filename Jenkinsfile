@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Install net-tool') {
       steps {
-        sh '''apt update && apt install -y net-tools
+        sh '''apt-get update && apt-get install -y net-tools
 
 
 '''
