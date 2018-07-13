@@ -1,13 +1,10 @@
 pipeline {
   agent any
   stages {
-    stage('') {
+    stage('Install net-tool') {
       steps {
-        sh '''#!/bin/bash
-
-
-
-
+        sh '''#!/bin/bash -x -v
+apt update && apt install -y net-tools
 
 
 '''
