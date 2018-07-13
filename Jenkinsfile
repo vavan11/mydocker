@@ -1,10 +1,10 @@
 pipeline {
   agent any
   stages {
-    stage('error') {
+    stage('mkdir') {
       steps {
         sh '''#!/bin/bash
-mkdir -p ~/.ssh
+ls -al
 
 
 
