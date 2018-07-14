@@ -3,7 +3,8 @@ pipeline {
   stages {
     stage('Install net-tool') {
       steps {
-        sh 'cat /bitnami/gateway'
+        sh '''HOSTIP=$(cat /bitnami/gateway)
+ssh -i /bitnami/ssh/id_rsa ${HOSTIP}@metaxa pwd'''
       }
     }
   }
