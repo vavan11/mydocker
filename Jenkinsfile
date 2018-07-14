@@ -1,9 +1,10 @@
 pipeline {
   agent any
   stages {
-    stage('Install net-tool') {
+    stage('ssh') {
       steps {
-        sh '''HOSTIP=$(cat /bitnami/gateway)
+        sh '''#!/bin/bash -v
+HOSTIP=$(cat /bitnami/gateway)
 ssh -i /bitnami/ssh/id_rsa -oStrictHostKeyChecking=no metaxa@${HOSTIP} pwd'''
       }
     }
