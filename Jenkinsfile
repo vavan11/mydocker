@@ -3,10 +3,7 @@ pipeline {
   stages {
     stage('Install net-tool') {
       steps {
-        sh '''apt-get update && apt-get install -y net-tools
-
-
-'''
+        sh 'cat /bitnami/gateway'
       }
     }
   }
